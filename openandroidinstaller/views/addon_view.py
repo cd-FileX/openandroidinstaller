@@ -50,28 +50,33 @@ class AddonsView(BaseView):
             modal=True,
             title=Text("What kind of addons are supported?"),
             content=Markdown(
-                """## Google Apps:
-There are different packages of Google Apps available. Most notable
-- [MindTheGapps](https://wiki.lineageos.org/gapps#downloads) and
-- [NikGApps](https://nikgapps.com).
+                """Please select all addons you want to install at once. See for the most common ones below.
 
-These packages are only dependent on your OS version and processor architecture, which can be found on each device specific info page.
-Filenames on MindTheGApps are of the format `MindTheGapps-<AndroidVersion>-<architecture>-<date>_<time>.zip` (with Android 12L being 12.1)
-and NikGApps are of the format `NikGapps-<flavour>-<architecture>-<AndroidVersion>-<date>-signed.zip`.
+## Google Apps:
+The packages listed here will bring back Google functionality to your phone, required by many proprietary apps.
+The most notable Google Apps packages are:
 
-NikGApps come in different flavours ranging from minimal Google support (core) to the full experience (full).
+- **[MicroG](https://github.com/microg/GmsCore/wiki)** ([Download](https://github.com/IsHacker003/microG_no_sigspoof/releases)):
+  **free-as-in-freedom re-implementation of Google**'s proprietary Android user space apps and libraries (installable after custom ROM installation as APK but might have problems with spoofing)
+- **[MindTheGapps](https://wiki.lineageos.org/gapps/)** ([Download](https://wiki.lineageos.org/gapps/#downloads)):
+  **full Google set** including all apps you can find on a standard Android device
+- **[NikGApps](https://nikgapps.com)** ([Download](https://sourceforge.net/projects/nikgapps/files/Releases/)):
+  choose your **set of Google Apps** and have NikGApps manage them more sustainable
 
-## MicroG
+These are dependend on the version of your **Android OS version** (Stock ROM) and the **phone's architecture**. You can find that information most likely on [LineageOS' device page](https://wiki.lineageos.org/devices).
 
-The [MicroG](https://microg.org) project offers a free-as-in-freedom re-implementation of Google's proprietary Android user space apps and libraries.
+If you got that, get your file from the above link like this (you can **only use one** at a time):
 
-The recommended way to install MicroG is to use the zip file provided here:
-- [https://github.com/FriendlyNeighborhoodShane/MinMicroG_releases/releases](https://github.com/FriendlyNeighborhoodShane/MinMicroG_releases/releases).
+- `MindTheGapps-<AndroidVersion>-<architecture>-<date>_<time>.zip` (with Android 12L being 12.1)
+- `NikGapps-<flavour>-<architecture>-<AndroidVersion>-<date>-signed.zip` (with [flavours](https://nikgapps.com/downloads) from minimal Google support (`core`) to full experience (`full`))
+- MircoG has only one zip
 
 ## F-Droid Appstore
 
-F-Droid is an installable catalogue of libre software apps for Android. The F-Droid client app makes it easy to browse, install, and keep track of updates on your device.
-You can get the zip file to install this addon here: [https://f-droid.org/en/packages/org.fdroid.fdroid.privileged.ota](https://f-droid.org/en/packages/org.fdroid.fdroid.privileged.ota).
+F-Droid is an installable **catalogue of libre software apps** for Android. The F-Droid client app makes it easy to browse, install, and keep track of updates on your device, just like the Google Play Store.
+
+Recommended **installation** is to use the zip from here:
+[https://f-droid.org/en/packages/org.fdroid.fdroid.privileged.ota](https://f-droid.org/en/packages/org.fdroid.fdroid.privileged.ota).
 """,
             ),
             actions=[

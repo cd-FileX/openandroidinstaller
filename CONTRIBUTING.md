@@ -77,3 +77,48 @@ Opening an issue first also allows other users to comment on it, often leading t
 If you want to write tests & documentation for existing features / behavior, always feel free to do so and open a pull request.
 Here, we would also appreciate if you opened an issue first to avoid duplicate work.
 If you have any questions while doing to, please open an issue or write us an email.
+
+## How to compile
+### 1. Clone the repository
+
+```
+git clone https://github.com/openandroidinstaller-dev/openandroidinstaller
+```
+
+### 2. Install the dependencies
+
+To build you need
+
+- Python (>=3.11, <=3.12.3)
+    * If you don't have it installed, get it from deadsnakes ppa or others
+- Poetry package
+    * Available from pip/pypi
+- Make
+
+To achieve this run
+``` bash
+cd openandroidinstaller
+# Now you should be in the folder you cloned into
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.11 python3.11-venv make
+```
+
+### 3. Build and run
+
+``` bash
+# Create a venv in the cloned folder
+python3.11 -m venv .venvs
+# Activate venv
+. .venv/bin/activate
+pip install poetry
+# Build the app
+make
+# Exit from the venv. ! Now you can't use poetry anymore
+deactivate
+cd openandroidinstaller
+# Run the app
+python3.11 openandroidinstaller.py
+```
+
+Now you should be up and running!
